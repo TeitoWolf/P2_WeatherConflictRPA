@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Detroit :
+Today:
+
+            67˚ Clear.
+            
+              Feels Like: 67˚
+              Low: 40˚
+              High: 68˚
+            
+          
+
+Tommorrow:
+Clear throughout the day.
+
+Day After Tomorrow:
+Partly cloudy throughout the day.
+
+3 Days Later:
+Partly cloudy throughout the day.
+
+The 4th Day After:
+Mostly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

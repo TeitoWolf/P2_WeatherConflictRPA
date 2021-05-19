@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Stara Zagora :
+Tuesday, 18 May 2021:
+
+            51˚ Clear.
+            
+              Feels Like: 51˚
+              Low: 50˚
+              High: 62˚
+            
+          
+
+Wednesday, 19 May 2021:
+Partly cloudy throughout the day.
+
+Thursday, 20 May 2021:
+Possible light rain starting in the morning.
+
+Friday, 21 May 2021:
+Possible light rain starting in the morning.
+
+Saturday, 22 May 2021:
+Light rain starting in the morning.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

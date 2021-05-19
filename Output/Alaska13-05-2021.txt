@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Alaska :
+Today:
+
+            45˚ Possible Light Rain.
+            
+              Feels Like: 42˚
+              Low: 41˚
+              High: 50˚
+            
+          
+
+Tommorrow:
+Rain throughout the day.
+
+Day After Tomorrow:
+Rain throughout the day.
+
+3 Days Later:
+Rain throughout the day.
+
+The 4th Day After:
+Light rain throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

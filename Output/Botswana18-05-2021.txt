@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Botswana :
+Today:
+
+            69˚ Clear.
+            
+              Feels Like: 69˚
+              Low: 52˚
+              High: 87˚
+            
+          
+
+Tommorrow:
+Clear throughout the day.
+
+Day After Tomorrow:
+Clear throughout the day.
+
+3 Days Later:
+Clear throughout the day.
+
+The 4th Day After:
+Clear throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

@@ -1,0 +1,24 @@
+Howdy!
+
+Here is the 5-day forecast for Miami :
+Today:
+
+            66˚ Clear.
+            
+              Feels Like: 66˚
+              Low: 52˚
+              High: 68˚
+            
+          
+
+Tommorrow:
+Possible light rain overnight.
+Day After Tomorrow:
+Mostly cloudy throughout the day.
+3 Days Later:
+Mostly cloudy throughout the day.
+The 4th Day After:
+Mostly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

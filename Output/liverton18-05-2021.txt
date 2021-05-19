@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for liverton :
+Today:
+Tuesday, 18 May 2021
+
+Wednesday, 19 May 2021:
+
+            79˚ Partly Cloudy.
+            
+              Feels Like: 79˚
+              Low: 56˚
+              High: 80˚
+            
+          
+
+Thursday, 20 May 2021:
+Clear throughout the day.
+
+Friday, 21 May 2021:
+Mostly cloudy throughout the day.
+
+Saturday, 22 May 2021:
+Mostly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto
