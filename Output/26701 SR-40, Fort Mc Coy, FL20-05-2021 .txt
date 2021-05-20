@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for 26701 SR-40, Fort Mc Coy, FL :
+Thursday, 20 May 2021:
+
+            84˚ Partly Cloudy.
+            
+              Feels Like: 84˚
+              Low: 67˚
+              High: 84˚
+            
+          
+
+Friday, 21 May 2021:
+Partly cloudy throughout the day.
+
+Saturday, 22 May 2021:
+Partly cloudy throughout the day.
+
+Sunday, 23 May 2021:
+Partly cloudy throughout the day.
+
+Monday, 24 May 2021:
+Partly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

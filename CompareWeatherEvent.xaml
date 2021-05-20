@@ -1,14 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="CompareWeatherEvent" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ConflictText" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_Location" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,2560.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,3200.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CompareWeatherEvent_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="23">
+    <scg:List x:TypeArguments="x:String" Capacity="46">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -32,6 +33,12 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -55,7 +62,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CompareWeatherEvent" sap:VirtualizedContainerService.HintSize="753.6,2396" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CompareWeatherEvent" sap:VirtualizedContainerService.HintSize="753.6,3036" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="WeatherData" />
       <Variable x:TypeArguments="sd:DataTable" Name="CalendarInfo" />
@@ -92,13 +99,13 @@
         <InArgument x:TypeArguments="s:String[]">[{WeatherData.Split(CChar(vblf))(5),WeatherData.Split(CChar(vblf))(14),WeatherData.Split(CChar(vblf))(17),WeatherData.Split(CChar(vblf))(20),WeatherData.Split(CChar(vblf))(23)}]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CalendarInfo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="712,1854.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CalendarInfo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="712,2494.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="678.4,1733.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="678.4,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Output">
                 <Variable.Default>
@@ -108,6 +115,7 @@
               <Variable x:TypeArguments="x:Boolean" Name="containsDate" />
               <Variable x:TypeArguments="ui:GenericValue" Name="TempEventDate" />
               <Variable x:TypeArguments="x:Int32" Name="counter" />
+              <Variable x:TypeArguments="x:String" Name="template" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -130,13 +138,13 @@
                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="636.8,1338.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ForecastDates]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="636.8,1431.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ForecastDates]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="fdate" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601.6,1204" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601.6,1296.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="rainBool" />
                     </Sequence.Variables>
@@ -169,9 +177,9 @@
                         <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[containsDate]" sap:VirtualizedContainerService.HintSize="560,711.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[containsDate]" sap:VirtualizedContainerService.HintSize="560,804" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="524.8,532" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="524.8,624.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,16 +201,23 @@
                               <InArgument x:TypeArguments="x:Boolean">[ForecastWeather(counter).ToLower.Contains("overcast")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[rainBool Or overcastBool]" sap:VirtualizedContainerService.HintSize="483.2,239.2" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[rainBool Or overcastBool]" sap:VirtualizedContainerService.HintSize="483.2,332" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
-                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[Output]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[CurrentRow(3).ToString+ " " + fdate + ForecastWeather(counter) + Environment.NewLine]</InArgument>
-                                </Assign.Value>
-                              </Assign>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[Output]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[CurrentRow(3).ToString+ " " + fdate + ForecastWeather(counter) + Environment.NewLine]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
                             </If.Then>
                           </If>
                         </Sequence>
@@ -220,6 +235,19 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
+            <ui:ReadTextFile Content="[template]" DisplayName="Read Text File" FileName="WeatherConflictNotificationMessage.txt" sap:VirtualizedContainerService.HintSize="636.8,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+            <If Condition="[Output.Trim = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="636.8,386.4" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,227.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;Output\&quot;+ in_Location  + DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;) + &quot;_WC .txt&quot;]" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[String.Format(template, in_Location, Output)]" />
+                </Sequence>
+              </If.Else>
+            </If>
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Output]" />
           </Sequence>
         </ActivityAction>

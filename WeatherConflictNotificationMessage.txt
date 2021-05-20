@@ -1,20 +1,8 @@
 Howdy!
 
-Here is the 5-day forecast for {0} :
-{1}:
-{6}
-
-{2}:
-{7}
-
-{3}:
-{8}
-
-{4}:
-{9}
-
-{5}:
-{10}
+Your plans at {0} may be disrupted.
+You may want to take a rain check on:
+{1}
 
 If any of this is incorrect, check the selectors and time of aquisition.
 Mr.Roboto
