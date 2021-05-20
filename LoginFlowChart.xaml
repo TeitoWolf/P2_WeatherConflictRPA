@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1638.4,1312</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1669,1206</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginFlowChart_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -57,7 +57,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="LoginFlowChart" sap:VirtualizedContainerService.HintSize="1648.8,1147.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="LoginFlowChart" sap:VirtualizedContainerService.HintSize="1649,1146" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="GetCred" />
       <Variable x:TypeArguments="x:String" Name="CredUser" />
@@ -70,26 +70,27 @@
       <Variable x:TypeArguments="x:String" Default="Enter Email" Name="EmailPrompt" />
       <Variable x:TypeArguments="x:String" Default="Enter Password" Name="PasswordPrompt" />
       <Variable x:TypeArguments="x:Boolean" Name="CalendarSignedIn" />
+      <Variable x:TypeArguments="x:Boolean" Name="ChooseAnAccount" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">10,12.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">40,87.5 110,87.5 110,114</av:PointCollection>
+        <av:Point x:Key="ShapeLocation">20,32.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">50,107.5 50,134.5 100,134.5 100,14.5 230,14.5 230,44.5</av:PointCollection>
         <x:Double x:Key="Width">1615.4051749570219</x:Double>
         <x:Double x:Key="Height">1110.2087128417043</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID18</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[GetCred]" DisplayName="Credentials Exist?" sap:VirtualizedContainerService.HintSize="97.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+    <FlowDecision x:Name="__ReferenceID2" Condition="[GetCred]" DisplayName="Credentials Exist?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">101.5,676.5</av:Point>
-          <av:Size x:Key="ShapeSize">97.6,87.2</av:Size>
+          <av:Size x:Key="ShapeSize">97,87</av:Size>
           <av:PointCollection x:Key="TrueConnector">101.5,720 9.99999999999999,720 9.99999999999999,840 40,840</av:PointCollection>
           <av:PointCollection x:Key="FalseConnector">198.5,720 310,720 310,406 440,406 440,436</av:PointCollection>
         </scg:Dictionary>
@@ -99,10 +100,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">40,806</av:Point>
-              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Login With Credentials" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Login With Credentials" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,11 +210,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">340,436</av:Point>
-              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">440,504 440,534 470,534 470,564</av:PointCollection>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">440,502 440,532 470,532 470,564</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="User Enter's Email" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="User Enter's Email" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -280,11 +281,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">370,564</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">470,616 470,716.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:UiElementExists DisplayName="Email Error Exists" Exists="[EmailError]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists DisplayName="Email Error Exists" Exists="[EmailError]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1366b17-d3b7-407e-81e8-d4924d74d2d6" InformativeScreenshot="6d5e6ad30212f7cf90f88187ff8141ca" Selector="&lt;html app='msedge.exe' /&gt;&lt;webctrl tag='DIV' aaname='Couldn*t find your Google Account' innertext='Couldn*t find your Google Account' /&gt;" TimeoutMS="2000">
                     <ui:Target.WaitForReady>
@@ -299,13 +300,13 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:UiElementExists>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID5" Condition="[EmailError]" DisplayName="Is there an Email Error" sap:VirtualizedContainerService.HintSize="121.6,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                <FlowDecision x:Name="__ReferenceID5" Condition="[EmailError]" DisplayName="Is there an Email Error" sap:VirtualizedContainerService.HintSize="120,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">409,716.5</av:Point>
-                      <av:Size x:Key="ShapeSize">121.6,87.2</av:Size>
-                      <av:PointCollection x:Key="FalseConnector">531,760 820,760 820,776</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">120,87</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">529,760 820,760 820,776</av:PointCollection>
                       <av:PointCollection x:Key="TrueConnector">409,760 390,760 390,850 450,850 450,880</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -314,11 +315,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">319,880</av:Point>
-                          <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                          <av:Size x:Key="ShapeSize">262,60</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">319,910 289,910 289,470 340,470</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[EmailPrompt]</OutArgument>
                         </Assign.To>
@@ -341,11 +342,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">720,776</av:Point>
-                          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">820,844 820,874 960.006954909431,874 960.006954909431,578.84149866318 1081.90653189966,578.84149866318 1081.90653189966,614 1090,614</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">820,842 820,872 700,872 700,602 1090,602 1090,614</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="User Enter's Password" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="User Enter's Password" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -423,11 +424,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">990,614</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">1090,666.8 1090,686.5 1220.5,686.5 1220.5,656.5 1318.9,656.5 1318.9,686.5</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">1090,665 1090,686.5 1220.5,686.5 1220.5,656.5 1319,656.5 1319,686.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:UiElementExists DisplayName="Password Error Exists" Exists="[PassWordError]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                          <ui:UiElementExists DisplayName="Password Error Exists" Exists="[PassWordError]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f84c785d-c1c1-4349-89d4-62412ccda4c6" InformativeScreenshot="b8fa78f908d8971752734e6ee2aa3812" Selector="&lt;html app='msedge.exe' /&gt;&lt;webctrl aaname='Wrong password. Try again or click Forgot password to reset it.' innertext='Wrong password. Try again or click Forgot password to reset it.' /&gt;" TimeoutMS="2000">
                                 <ui:Target.WaitForReady>
@@ -442,12 +443,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:UiElementExists>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID7" Condition="[PassWordError]" DisplayName="Is There a Password Error" sap:VirtualizedContainerService.HintSize="136.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                            <FlowDecision x:Name="__ReferenceID7" Condition="[PassWordError]" DisplayName="Is There a Password Error" sap:VirtualizedContainerService.HintSize="136,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">1250.5,686.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">136.8,87.2</av:Size>
+                                  <av:Size x:Key="ShapeSize">136,87</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">1250.5,730 1120,730 1120,980</av:PointCollection>
                                   <av:PointCollection x:Key="FalseConnector">1387.3,730.1 1490,730.1 1490,815.6</av:PointCollection>
                                 </scg:Dictionary>
@@ -457,7 +458,7 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">989,980</av:Point>
-                                      <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">1120,1040 1120,1070 690,1070 690,810 720,810</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -484,7 +485,7 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">1390,815.6</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,69</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">1490,884.4 1490,913.6</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -501,7 +502,7 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">1390,913.6</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,53</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:MultipleAssign DisplayName="Output Login" sap:VirtualizedContainerService.HintSize="333.6,130.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
@@ -552,11 +553,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">60,436</av:Point>
-          <av:Size x:Key="ShapeSize">200,128.8</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">160,564 160,594 150,594 150,676.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,123</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">160,559 160,589 150.5,589 150.5,676.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="Attempts to get Secure Windows Credential&#xA;" DisplayName="Get Secure Credentials" sap:VirtualizedContainerService.HintSize="200,128.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence sap2010:Annotation.AnnotationText="Attempts to get Secure Windows Credential&#xA;" DisplayName="Get Secure Credentials" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -579,21 +580,21 @@
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
-    <FlowStep x:Name="__ReferenceID15">
+    <FlowStep x:Name="__ReferenceID18">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">10,114</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">110,166 110,196 120,196 120,204</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">130,44.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">230,95.5 230,125.5 110,125.5 110,5.5 470,5.5 470,34.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" Url="http://calendar.google.com/">
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_5" Url="http://calendar.google.com/">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,12 +613,12 @@
         <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">20,204</av:Point>
-              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">120,256 120,286 112.5,286 112.5,296.5</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">370,34.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">470,85.5 470,115.5 90,115.5 90,176.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:UiElementExists DisplayName="Calendar Logo Exists" Exists="[CalendarSignedIn]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+          <ui:UiElementExists DisplayName="Calendar Logo Exists" Exists="[CalendarSignedIn]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9cdd297c-0a71-41a5-b6b3-d89194bb326a" InformativeScreenshot="bb54d8bd7e3b59e72adf5bdef355cc11" Selector="&lt;html app='msedge.exe' title='Google Calendar *' /&gt;&lt;webctrl aaname='Calendar' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' parentid='gb' tag='SPAN' /&gt;" TimeoutMS="2000">
                 <ui:Target.WaitForReady>
@@ -632,17 +633,114 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:UiElementExists>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID13" Condition="[CalendarSignedIn]" DisplayName="Already Signed In?" sap:VirtualizedContainerService.HintSize="104.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+            <FlowDecision x:Name="__ReferenceID13" Condition="[CalendarSignedIn]" DisplayName="Already Signed In?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">60.5,296.5</av:Point>
-                  <av:Size x:Key="ShapeSize">104.8,87.2</av:Size>
-                  <av:PointCollection x:Key="FalseConnector">164.5,340 190,340 190,406 160,406 160,436</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">38.5,176.5</av:Point>
+                  <av:Size x:Key="ShapeSize">103,87</av:Size>
+                  <av:PointCollection x:Key="FalseConnector">141.5,220 171.5,220 171.5,144.5 450,144.5 450,174.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.False>
-                <x:Reference>__ReferenceID11</x:Reference>
+                <FlowStep x:Name="__ReferenceID15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">350,174.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">450,225.5 450,255.5 490.25,255.5 490.25,256.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Other Gmail Account Exists" Exists="[ChooseAnAccount]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6aba58be-c4e5-4d69-a411-882b69bb04e2" InformativeScreenshot="052ab64384b503b4afe366e289ae45b5" Selector="&lt;html app='msedge.exe' title='Google Calendar *' /&gt;&lt;webctrl parentid='headingText' tag='SPAN' innertext='Choose an account' /&gt;" TimeoutMS="1000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:UiElementExists>
+                  <FlowStep.Next>
+                    <FlowDecision x:Name="__ReferenceID16" Condition="[ChooseAnAccount]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">470.5,256.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="FalseConnector">549.5,300 579.5,300 579.5,406 160,406 160,436</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">470.5,300 440.5,300 440.5,320 370,320</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">170,287</av:Point>
+                              <av:Size x:Key="ShapeSize">200,66</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">270,353 270,383 30,383 30,497.5 60,497.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Navigate to Login " sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Google'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="258bc0d5dd1bc870386b62c84001e8dd" Selector="&lt;html app='msedge.exe' title='Google Calendar - Sign in *' /&gt;">
+                              <ui:BrowserScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dcae9b84-c87e-4943-a5d6-f01e41010fe0" InformativeScreenshot="a48f6bb06e5f1f1bf9744ff612fe4851" Selector="&lt;webctrl aaname='Use another account' parentid='view_container' tag='DIV' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:BrowserScope.Body>
+                            </ui:BrowserScope>
+                          </Sequence>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID11</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <x:Reference>__ReferenceID11</x:Reference>
+                      </FlowDecision.False>
+                    </FlowDecision>
+                  </FlowStep.Next>
+                </FlowStep>
               </FlowDecision.False>
             </FlowDecision>
           </FlowStep.Next>
@@ -652,5 +750,8 @@
     <x:Reference>__ReferenceID12</x:Reference>
     <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
+    <x:Reference>__ReferenceID15</x:Reference>
+    <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
   </Flowchart>
 </Activity>
