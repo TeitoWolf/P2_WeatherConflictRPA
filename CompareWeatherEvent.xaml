@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CompareWeatherEvent" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="887,2385" sap2010:WorkflowViewState.IdRef="CompareWeatherEvent_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CompareWeatherEvent" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ConflictText" Type="InOutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>824,2560.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CompareWeatherEvent_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -47,7 +55,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CompareWeatherEvent" sap:VirtualizedContainerService.HintSize="867,2325" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CompareWeatherEvent" sap:VirtualizedContainerService.HintSize="753.6,2396" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="WeatherData" />
       <Variable x:TypeArguments="sd:DataTable" Name="CalendarInfo" />
@@ -60,15 +68,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile Content="[WeatherData]" DisplayName="Read Text File" FileName="Output\Main St, Juneau, AK20-05-2021.txt" sap:VirtualizedContainerService.HintSize="825,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:ReadRange AddHeaders="False" DataTable="[CalendarInfo]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="825,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="CalendarData.xlsx">
+    <ui:ReadTextFile Content="[WeatherData]" DisplayName="Read Text File" FileName="[in_ConflictText]" sap:VirtualizedContainerService.HintSize="712,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:ReadRange AddHeaders="False" DataTable="[CalendarInfo]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="712,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="CalendarData.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="825,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="712,60" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[ForecastDates]</OutArgument>
       </Assign.To>
@@ -76,7 +84,7 @@
         <InArgument x:TypeArguments="s:String[]">[{ WeatherData.Split(CChar(vblf))(3), WeatherData.Split(CChar(vblf))(13), WeatherData.Split(CChar(vblf))(16), WeatherData.Split(CChar(vblf))(19), WeatherData.Split(CChar(vblf))(22)}]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="825,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="712,60" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[ForecastWeather]</OutArgument>
       </Assign.To>
@@ -84,13 +92,13 @@
         <InArgument x:TypeArguments="s:String[]">[{WeatherData.Split(CChar(vblf))(5),WeatherData.Split(CChar(vblf))(14),WeatherData.Split(CChar(vblf))(17),WeatherData.Split(CChar(vblf))(20),WeatherData.Split(CChar(vblf))(23)}]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CalendarInfo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="825,1787" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CalendarInfo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="712,1854.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="791,1667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="678.4,1733.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Output">
                 <Variable.Default>
@@ -106,7 +114,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="749,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="636.8,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="ui:GenericValue">[TempEventDate]</OutArgument>
               </Assign.To>
@@ -114,7 +122,7 @@
                 <InArgument x:TypeArguments="ui:GenericValue">[CurrentRow(0).ToString + " "+CurrentRow(2).ToString.ToLower]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="749,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="636.8,60" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
               </Assign.To>
@@ -122,13 +130,13 @@
                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="749,1274" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ForecastDates]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="636.8,1338.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ForecastDates]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="fdate" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="713,1140" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601.6,1204" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="rainBool" />
                     </Sequence.Variables>
@@ -137,7 +145,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="671,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[containsDate]</OutArgument>
                       </Assign.To>
@@ -145,7 +153,7 @@
                         <InArgument x:TypeArguments="x:Boolean">[fdate.ToLower.Contains(TempEventDate)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="671,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                    <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[rainBool]</OutArgument>
                       </Assign.To>
@@ -153,7 +161,7 @@
                         <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="671,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                    <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[overcastBool]</OutArgument>
                       </Assign.To>
@@ -161,15 +169,15 @@
                         <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[containsDate]" sap:VirtualizedContainerService.HintSize="671,648" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[containsDate]" sap:VirtualizedContainerService.HintSize="560,711.2" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="526,500" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="524.8,532" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[rainBool]</OutArgument>
                             </Assign.To>
@@ -177,7 +185,7 @@
                               <InArgument x:TypeArguments="x:Boolean">[ForecastWeather(counter).ToLower.Contains("rain")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                          <Assign sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[overcastBool]</OutArgument>
                             </Assign.To>
@@ -185,9 +193,9 @@
                               <InArgument x:TypeArguments="x:Boolean">[ForecastWeather(counter).ToLower.Contains("overcast")]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[rainBool Or overcastBool]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[rainBool Or overcastBool]" sap:VirtualizedContainerService.HintSize="483.2,239.2" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[Output]</OutArgument>
                                 </Assign.To>
@@ -200,7 +208,7 @@
                         </Sequence>
                       </If.Then>
                     </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="671,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
                       </Assign.To>
@@ -212,7 +220,7 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="749,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Output]" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[Output]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>

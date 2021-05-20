@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for 216 Ontario St, Kingston, ON :
+Thursday, 20 May 2021:
+
+            73˚ Partly Cloudy.
+            
+              Feels Like: 73˚
+              Low: 55˚
+              High: 75˚
+            
+          
+
+Friday, 21 May 2021:
+Mostly cloudy throughout the day.
+
+Saturday, 22 May 2021:
+Overcast throughout the day.
+
+Sunday, 23 May 2021:
+Overcast throughout the day.
+
+Monday, 24 May 2021:
+Mostly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto
