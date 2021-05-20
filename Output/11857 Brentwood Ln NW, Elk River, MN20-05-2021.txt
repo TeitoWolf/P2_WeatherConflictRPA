@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for 11857 Brentwood Ln NW, Elk River, MN :
+Thursday, 20 May 2021:
+
+            65˚ Light Rain.
+            
+              Feels Like: 66˚
+              Low: 64˚
+              High: 73˚
+            
+          
+
+Friday, 21 May 2021:
+Rain overnight and in the morning.
+
+Saturday, 22 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Sunday, 23 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Monday, 24 May 2021:
+Possible light rain in the evening.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Main St, Juneau, AK :
+Thursday, 20 May 2021:
+
+            44˚ Overcast.
+            
+              Feels Like: 42˚
+              Low: 42˚
+              High: 56˚
+            
+          
+
+Friday, 21 May 2021:
+Rain throughout the day.
+
+Saturday, 22 May 2021:
+Rain throughout the day.
+
+Sunday, 23 May 2021:
+Rain throughout the day.
+
+Monday, 24 May 2021:
+Light rain until afternoon.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto
