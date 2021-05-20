@@ -3,13 +3,14 @@
   "description": "Compare Google Calendar events to 5-day weather forecast\r\n",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.7.2]",
-    "UiPath.GSuite.Activities": "[1.11.0]",
-    "UiPath.Mail.Activities": "[1.7.2]",
-    "UiPath.System.Activities": "[19.10.1]",
-    "UiPath.UIAutomation.Activities": "[19.11.3]"
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.Mail.Activities": "[1.10.4]",
+    "UiPath.System.Activities": "[21.4.0]",
+    "UiPath.UIAutomation.Activities": "[21.4.3]"
   },
   "webServices": [],
+  "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.10.5.0",
   "projectVersion": "1.0.0",
@@ -22,7 +23,9 @@
       "Private:*",
       "*password*"
     ],
-    "executionType": "Workflow"
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -31,7 +34,23 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     },
-    "fileInfos": []
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
   },
-  "expressionLanguage": "VisualBasic"
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "9bdfc557-5792-487a-80e8-8b8ee566d927",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
 }
