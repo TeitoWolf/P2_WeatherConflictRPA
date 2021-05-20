@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "WeatherConflict",
   "description": "Compare Google Calendar events to 5-day weather forecast\r\n",
   "main": "Main.xaml",
