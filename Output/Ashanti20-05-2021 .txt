@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for Ashanti :
+Thursday, 20 May 2021:
+
+            82˚ Humid and Mostly Cloudy.
+            
+              Feels Like: 89˚
+              Low: 75˚
+              High: 99˚
+            
+          
+
+Friday, 21 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Saturday, 22 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Sunday, 23 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Monday, 24 May 2021:
+Humid and partly cloudy throughout the day.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto

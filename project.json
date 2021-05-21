@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "WeatherConflict",
   "description": "Compare Google Calendar events to 5-day weather forecast\r\n",
-  "main": "Main.xaml",
+  "main": "Weather Conflict Checker.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -43,8 +43,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "9bdfc557-5792-487a-80e8-8b8ee566d927",
+      "filePath": "Weather Conflict Checker.xaml",
+      "uniqueId": "5c86bd20-2dc4-431c-8e39-c6e5ea69e1d7",
       "input": [],
       "output": []
     }
