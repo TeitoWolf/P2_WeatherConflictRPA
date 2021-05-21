@@ -1,0 +1,27 @@
+Howdy!
+
+Here is the 5-day forecast for 439 McKinney St, Houston, TX :
+Friday, 21 May 2021:
+
+            76˚ Humid and Overcast.
+            
+              Feels Like: 78˚
+              Low: 70˚
+              High: 80˚
+            
+          
+
+Saturday, 22 May 2021:
+Rain and humid throughout the day.
+
+Sunday, 23 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Monday, 24 May 2021:
+Humid and mostly cloudy throughout the day.
+
+Tuesday, 25 May 2021:
+Rain in the morning and afternoon.
+
+If any of this is incorrect, check the selectors and time of aquisition.
+Mr.Roboto
